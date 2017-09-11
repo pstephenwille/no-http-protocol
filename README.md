@@ -2,10 +2,19 @@
 
 Use `//my.server.com` instead.
 
+## Install
+npm i -D eslint-plugin-no-http-protocol
+```js
+    "plugins": ["no-http-protocol"],
+    "rules": {
+        "no-http-protocol/no-http-protocol": ["error"]
+    }
+
+```
 
 ## Rule Details
 
-This rule aims to...
+This rule aims to keep URLs protocol netural.  The idea is to prevent errors typically when the site is under HTTPS and somewhere there's an HTTP URL left in the code.
 
 Examples of **incorrect** code for this rule:
 
@@ -24,11 +33,8 @@ Examples of **correct** code for this rule:
 
 ```js
 
-var invalidVar = '//my.server.com';
-var invalidVar = '//my.server.com';
+var valid = '//my.server.com';
 $.get('//my.site.com');
-$.get('//my.site.com');
-let http = '//my.site.com';
 let https = '//my.site.com';
 
 ```
@@ -39,7 +45,7 @@ None
 
 ## When Not To Use It
 
-None
+FTP(S) or custom protocols.
 
 ## Further Reading
 

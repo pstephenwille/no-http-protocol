@@ -1,0 +1,32 @@
+{
+    "name": "eslint-plugin-no-http-protocol",
+    "version": "1.0.2",
+    "description": "Forbids specifying `http(s)` protocol in URLs",
+    "main": "lib/index.js",
+    "author": "Stephen Wille",
+    "keywords": [
+        "eslint",
+        "eslintplugin",
+        "eslint-plugin"
+    ],
+    "scripts": {
+        "test": "node_modules/mocha/bin/mocha tests --recursive"
+    },
+    "homepage": "https://github.com/pstephenwille/no-http-protocol",
+    "repository": "https://github.com/pstephenwille/no-http-protocol",
+    "peerDependencies": {
+        "eslint": "*"
+    },
+    "dependencies": {
+        "requireindex": "^1.1.0"
+    },
+    "devDependencies": {
+        "eslint": "latest",
+        "mocha": "^3.5.2"
+    },
+    "engines": {
+        "npm": ">=5.4.0",
+        "node": ">=0.10.0"
+    },
+    "license": "ISC"
+}
